@@ -29,12 +29,9 @@ export const productsArr = [
 function App() {
 return (
 <Fragment>
-  
+    <Header />
       
-  
-      <Header />
-      
-      <Items products={productsArr} />
+    <Items products={productsArr} />
 </Fragment>
   );
 }
