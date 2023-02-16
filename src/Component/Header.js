@@ -38,6 +38,5 @@ return(
         The Generics
         </p>
         </Fragment>
-);
-};
+)};
 export default Header;

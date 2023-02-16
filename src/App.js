@@ -30,7 +30,6 @@ function App() {
 return (
 <Fragment>
     <Header />
-      
     <Items products={productsArr} />
 </Fragment>
   );

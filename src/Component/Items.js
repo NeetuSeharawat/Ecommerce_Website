@@ -13,6 +13,6 @@ const Items = ({products}) => {
         </div>
       ))}
   </Fragment>
-  )}
+  )};
 
 export default Items;
