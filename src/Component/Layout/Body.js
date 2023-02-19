@@ -1,10 +1,20 @@
-import {Fragment} from "react";
-//import CartContext from "../Store/CartContext";
+import {Fragment, useContext} from "react";
+import CartContext from "../Store/CartContext";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { productsArr } from "../../ProductData/Data";
 
 const Body = () => {
+  const cartCtx = useContext(CartContext);
+  const addToCartHandler = (item) => {
+    cartCtx.addItem({
+      id: item.id,
+      imageUrl: item.imageUrl,
+      title: item.title,
+      price: item.price,
+      amount: 1,
+    });
+  };
 return (
     <Fragment>
       <h2 style={{ textAlign: "center" }}>Music</h2>
@@ -82,7 +92,7 @@ return (
                     <Button
                       variant="primary"
                       style={{ float: "right", marginTop: "15px" }}
-                      //onClick={() => addToCartHandler(item)}
+                      onClick={() => addToCartHandler(item)}
                     >
                       Add to Cart
                     </Button>
