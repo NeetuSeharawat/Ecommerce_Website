@@ -46,7 +46,7 @@ return (
                     </Card.Text>
                     <Button variant="primary"
                       style={{ float: "right", marginTop: "15px" }}
-                      //onClick={() => addToCartHandler(item)}
+                      onClick={() => addToCartHandler(item)}
                     >
                       Add to Cart
                     </Button>
