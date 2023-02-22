@@ -4,14 +4,12 @@ import MovieList from './MoviePages/MoviesList';
 import './App.css';
 
 function App(){
-    const [movies, setMovies]= useState([]);
+  const [movies, setMovies]= useState([]);
 
-    function fetchMoviesHandler(){
-    fetch('https://swapi.dev/api/films/')
-    .then((response)=>{
-        return response.json();
-     })
-     .then ((data)=>{
+  async function fetchMoviesHandler(){
+    const response = await fetch('https://swapi.dev/api/films/')
+     const data = await response.json();
+     
         const transformedMovies = data.results.map((movieData)=>{
         return{
             id:movieData.episode_id,
@@ -21,8 +19,8 @@ function App(){
         };
      }) ;
      setMovies(transformedMovies);
-});
 }
+ 
 return(
 <Fragment>
     <section>
