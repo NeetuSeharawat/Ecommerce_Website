@@ -5,13 +5,13 @@ import HOME from "./Pages/Home";
 import ABOUT from "./Pages/About";
 import STORE from "./Pages/STORE";
 
-
 import { Routes,Route} from 'react-router-dom';
 
 function App() {
 return (
 <CartProvider>
       <Header />
+      
           <Routes>
           <Route path="/home" element={<HOME/>} />
           <Route path="/store" element={<STORE/>} />
