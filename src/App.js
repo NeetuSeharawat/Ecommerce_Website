@@ -19,8 +19,8 @@ function App(){
            throw new Error('Something went wrong ...Retry!!');
         }
 
-         const data = await response.json();
-                     const transformedMovies = data.results.map((movieData)=>{
+        const data = await response.json();
+            const transformedMovies = data.results.map((movieData)=>{
             return{
                 id:movieData.episode_id,
                 title: movieData.title,
@@ -28,7 +28,7 @@ function App(){
                 releaseDate : movieData.release_Date
             };
          }) ;
-         setMovies(transformedMovies);   
+        setMovies(transformedMovies);   
     }catch(error){
     setError(error.message);
     }
@@ -39,17 +39,16 @@ function App(){
         fetchMoviesHandler();
          },[fetchMoviesHandler]);
  
-let content =<p>Found no Movie!</p>
-if(movies.length >0){
+    let content =<p>Found no Movie!</p>
+    if(movies.length >0){
     content = <MovieList movies ={movies} />;
-}
-if (error){
-    content =<p>error</p>;
-}
-if(isLoading){
-    content = <p>Loading..</p>;
-}
-
+    }
+    if (error){
+        content =<p>error</p>;
+    }
+    if(isLoading){
+        content = <p>Loading..</p>;
+    }
 
 return(
 <Fragment>
