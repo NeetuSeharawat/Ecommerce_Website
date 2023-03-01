@@ -6,21 +6,26 @@ import ABOUT from "./Pages/About";
 import STORE from "./Pages/STORE";
 import ContactUs from "./Pages/ContactUs";
 import {  Routes ,Route } from 'react-router-dom';
+import ProductDetails from './Pages/ProductDetails';
+
 
 
 function App() {
 return (
 <CartProvider>
-      <Header />
+        <Header />
           <Routes>
           <Route path="/home" element={<HOME/>} />
           <Route path="/store" element={<STORE/>} />
+
+          <Route path="/product/:productId" element={<ProductDetails />} />
+
           <Route path="/about" element={<ABOUT/>} />
           <Route path="/contactUs" element={<ContactUs/>}/>
           </Routes>
          
         <Footer />
  </CartProvider> 
-  );
+);
 };
 export default App;
