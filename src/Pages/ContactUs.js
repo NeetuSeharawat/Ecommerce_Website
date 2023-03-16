@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+//useRef Hook allow to persist values between renders..used to store a mutable value.
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 

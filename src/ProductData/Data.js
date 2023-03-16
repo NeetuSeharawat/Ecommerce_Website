@@ -25,7 +25,7 @@ export const productsArr = [
 
   {
     id: "p2",
-    title: "Album 2: Black and white Colors",
+    title: "Album 2: BW Colors",
     price: 50,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
     
@@ -49,7 +49,7 @@ export const productsArr = [
 
   {
     id: "p3",
-    title: "Album 3: Yellow and Black Colors",
+    title: "Album 3: YB Colors",
     price: 70,
     imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
 
